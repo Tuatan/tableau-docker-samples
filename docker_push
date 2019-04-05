@@ -1,4 +1,6 @@
 #!/bin/bash
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 cd /samples/tabcmd/
-docker push Tuatan/unofficial-tableau-tabcmd:2019.8.3
+version=`cat VERSION`
+echo "version: $version"
+docker push Tuatan/unofficial-tableau-tabcmd:$version
