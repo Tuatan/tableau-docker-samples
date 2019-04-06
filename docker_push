@@ -4,5 +4,7 @@ cd ./samples/tabcmd/
 version=`cat VERSION`
 echo "version: $version"
 docker build -t tuatan/unofficial-tableau-tabcmd .
+docker tag tuatan/unofficial-tableau-tabcmd "tuatan/unofficial-tableau-tabcmd:latest"
+docker tag tuatan/unofficial-tableau-tabcmd "tuatan/unofficial-tableau-tabcmd:${version}"
 echo "version: $version"
 docker push tuatan/unofficial-tableau-tabcmd:$version
