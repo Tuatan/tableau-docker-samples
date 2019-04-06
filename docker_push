@@ -3,6 +3,6 @@ echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 cd ./samples/tabcmd/
 version=`cat VERSION`
 echo "version: $version"
-docker commit -m "Added initial version" -a "NAME" unofficial-tableau-tabcmd tuatan/unofficial-tableau-tabcmd:$version
+docker build -t tuatan/unofficial-tableau-tabcmd .
 echo "version: $version"
 docker push tuatan/unofficial-tableau-tabcmd:$version
