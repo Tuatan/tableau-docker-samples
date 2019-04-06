@@ -6,4 +6,5 @@ echo "version: $version"
 docker build -t tuatan/tabcmd .
 docker tag tuatan/tabcmd "tuatan/tabcmd:latest"
 docker tag tuatan/tabcmd "tuatan/tabcmd:${version}"
+docker push tuatan/tabcmd:latest
 docker push tuatan/tabcmd:$version
