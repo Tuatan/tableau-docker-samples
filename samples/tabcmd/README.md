@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/Tuatan/tableau-docker-samples.svg?branch=master)](https://travis-ci.org/Tuatan/tableau-docker-samples)
+[![Docker pulls](https://img.shields.io/docker/pulls/tuatan/tabcmd.svg)](https://cloud.docker.com/repository/docker/tuatan/tabcmd)
+
 ## Containerized Tabcmd client 
 
 Docker for the official [Tabcmd client](https://onlinehelp.tableau.com/current/server/en-us/tabcmd.htm).
