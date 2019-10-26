@@ -8,3 +8,11 @@ docker tag tuatan/tabcmd "tuatan/tabcmd:latest"
 docker tag tuatan/tabcmd "tuatan/tabcmd:${version}"
 docker push tuatan/tabcmd:latest
 docker push tuatan/tabcmd:$version
+cd ../server-api-client/
+version=`cat VERSION`
+echo "version: $version"
+docker build -t tuatan/tableauserverclient .
+docker tag tuatan/tableauserverclient "tuatan/tableauserverclient:latest"
+docker tag tuatan/tableauserverclient "tuatan/tableauserverclient:${version}"
+docker push tuatan/tableauserverclient:latest
+docker push tuatan/tableauserverclient:$version
