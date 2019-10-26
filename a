@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+cd ./samples/tabcmd/
+version=`cat VERSION`
+echo "version: $version"
+docker build -t tuatan/tabcmd .
+docker tag tuatan/tableauserverclient "tuatan/tableauserverclient:latest"
+docker tag tuatan/tableauserverclient "tuatan/tableauserverclient:0.9"
+docker push tuatan/tableauserverclient:latest
+docker push tuatan/tableauserverclient:0.9
