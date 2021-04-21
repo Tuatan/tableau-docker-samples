@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:8-jre
 
 ADD https://downloads.tableau.com/esdalt/2019.3.1/tableau-tabcmd-2019-3-1_all.deb /tableau-tabcmd-2019-3-1_all.deb
 
